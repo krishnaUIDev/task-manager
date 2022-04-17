@@ -1,0 +1,26 @@
+A module is defined by annotating a class with the @Module decorator.
+
+@Module decorator properties;
+1. providers: Array of providers to be available within the module via dependency injection.
+2. controllers: array of controllers to be instaianted within the module.
+3. exports: to export to other module.A
+4. imports 
+
+// Contollers
+
+--> Responsible or handling incoming request and response to the client;
+--> bound to a specif path, and
+-- contain handlers which handle endpoints and request methods,
+--> can take advantage of dependency injection to consume providers withing the same module
+
+Controllers are defined by decorating a class with the @controller decorator. the decorator ccepts a string which is the path to be handle by controller,
+
+handlers are simply methods with the contoroller class decorated with decorators such as @Get, @Post, @Delete 
+
+// providers 
+can be injected into constructors if decorated as an @Injectable via dependency injections.
+can be a plain vale, a class sync async factory etc,
+can be export and imports;
+
+Service:
+defined as providers. Not all providers are service. 
